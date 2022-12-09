@@ -1,6 +1,4 @@
 import '../App.css'
-import { useState } from 'react'
-
 import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper';
 
 function randBoolean() {
