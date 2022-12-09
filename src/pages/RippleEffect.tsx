@@ -52,6 +52,6 @@ export function RippleEffect() {
   }
 
   return (
-    <ReactP5Wrapper sketch={sketch}></ReactP5Wrapper>
+    <ReactP5Wrapper sketch={sketch}/>
   )
 }
