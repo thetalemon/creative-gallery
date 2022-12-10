@@ -19,6 +19,7 @@ export type PageContextCustom = {
       title?: string
       description?: string
       img?: string
+      url?: string
     }
   }
 }
