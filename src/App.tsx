@@ -1,19 +1,13 @@
-import React from 'react'
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-} from 'react-router-dom'
-import {Home} from './pages/Home'
-import {RippleEffect} from './pages/RippleEffect'
+import { FC, Suspense } from 'react'
 
-export const App: React.FC = () => {
+import { useRoutes } from 'react-router-dom'
+import routes from '~react-pages'
+
+export const App: FC = () => {
+  const Routes = () => useRoutes(routes)
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/ripple" element={<RippleEffect />} />
-      </Routes>
-    </BrowserRouter>
+    <Suspense fallback={<p>Loading...</p>}>
+      {useRoutes(routes)}
+    </Suspense>
   )
 }

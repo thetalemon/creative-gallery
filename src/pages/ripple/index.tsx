@@ -1,4 +1,4 @@
-import '../App.css'
+import '../../App.css'
 import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper';
 
 function randBoolean() {
@@ -55,3 +55,5 @@ export function RippleEffect() {
     <ReactP5Wrapper sketch={sketch}/>
   )
 }
+
+export default RippleEffect

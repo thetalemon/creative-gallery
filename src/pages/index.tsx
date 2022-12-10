@@ -3,8 +3,7 @@ import reactLogo from '../assets/react.svg'
 import '../App.css'
 import { Link } from 'react-router-dom'
 
-export function Home() {
-
+function Home() {
   return (
     <div className="App">
       <ul>
@@ -14,3 +13,4 @@ export function Home() {
   )
 }
 
+export default Home
