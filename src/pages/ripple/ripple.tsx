@@ -1,6 +1,6 @@
 import '../../App.css'
 import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper'
-import {Helmet} from "react-helmet-async"
+import React from "react"
 
 function randBoolean() {
   return Math.random() < 0.05
@@ -11,9 +11,9 @@ type Ripple = {
   diameterList: number[]
 }
 
-const rippleList: Ripple[] = [];
+const rippleList: Ripple[] = []
 
-export function RippleEffect() {
+const Ripple: React.FC = () => {
   const sketch = (p: P5CanvasInstance) => {
     p.setup = () => {
       p.createCanvas(800, 500)
@@ -53,17 +53,8 @@ export function RippleEffect() {
   }
 
   return (
-    <>
-      <Helmet
-      title='波紋 - manasas p.js gallery'
-      meta={[
-        { property: 'og:image', content: '/ripple.png' },
-        { property: 'og:description', content: '波紋。もとい、雨の日。' }
-      ]}
-      />
-      <ReactP5Wrapper sketch={sketch}/>
-    </>
+    <ReactP5Wrapper sketch={sketch}/>
   )
 }
 
-export default RippleEffect
+export default Ripple
