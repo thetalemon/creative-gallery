@@ -2,8 +2,6 @@ import '../../App.css'
 import { Helmet } from "react-helmet-async"
 import React, { Suspense } from "react"
 import loadable from '@loadable/component'
-// const { Ripple } = React.lazy(() => import('./ripple'))
-
 
 export const documentProps = {
   title: '波紋 - manasas p.js gallery',
