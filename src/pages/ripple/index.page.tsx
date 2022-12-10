@@ -6,7 +6,7 @@ import loadable from '@loadable/component'
 export const documentProps = {
   title: '波紋 - manasas p.js gallery',
   description: '雨の日の地面って良いよね。',
-  img: '/ripple.png'
+  img: 'https://creative-gallery-ten.vercel.app/ripple.png'
 }
 
 const createRipple = (serverSide: boolean) => serverSide && React.lazy(() => import('./ripple'))

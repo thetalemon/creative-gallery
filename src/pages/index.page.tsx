@@ -5,7 +5,7 @@ import '../App.css'
 export const documentProps = {
   title: 'manasas p.js gallery',
   description: 'まなさすのp5.js作品展示場。',
-  img: '/top.png'
+  img: 'https://creative-gallery-ten.vercel.app/top.png'
 }
 
 export function Page() {
