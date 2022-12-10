@@ -1,5 +1,6 @@
 import '../../App.css'
-import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper';
+import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper'
+import {Helmet} from "react-helmet-async"
 
 function randBoolean() {
   return Math.random() < 0.05
@@ -52,7 +53,16 @@ export function RippleEffect() {
   }
 
   return (
-    <ReactP5Wrapper sketch={sketch}/>
+    <>
+      <Helmet
+      title='波紋 - manasas p.js gallery'
+      meta={[
+        { property: 'og:image', content: '/ripple.png' },
+        { property: 'og:description', content: '波紋。もとい、雨の日。' }
+      ]}
+      />
+      <ReactP5Wrapper sketch={sketch}/>
+    </>
   )
 }
 
