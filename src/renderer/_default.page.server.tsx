@@ -21,7 +21,7 @@ async function render(pageContext: PageContextServer) {
   const title = (documentProps && documentProps.title) || 'manasas p.js gallery'
   const desc = (documentProps && documentProps.description) || 'まなさすのp5.js作品展示場。'
   const img = (documentProps && documentProps.img) || 'https://creative-gallery-ten.vercel.app/top.png'
-  const url = (documentProps && documentProps.img) || 'https://creative-gallery-ten.vercel.app'
+  const url = (documentProps && documentProps.url) || 'https://creative-gallery-ten.vercel.app'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
