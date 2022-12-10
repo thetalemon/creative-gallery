@@ -30,6 +30,8 @@ async function render(pageContext: PageContextServer) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="description" content="${desc}" />
         <meta property="og:image" content="${img}" />
+        <meta property="og:title" content="${title}" />
+        <meta property="og:description" content="${desc}" />
         <title>${title}</title>
       </head>
       <body>
