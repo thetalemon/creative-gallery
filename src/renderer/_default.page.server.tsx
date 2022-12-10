@@ -34,7 +34,7 @@ async function render(pageContext: PageContextServer) {
         <meta name="twitter:site" content="@thetalemon">
         <meta name="twitter:description" content="${desc}" />
         <meta name="twitter:title" content="${title}" />
-        <meta name="twitter:image" content="${desc}" />
+        <meta name="twitter:image" content="${img}" />
         <meta property="og:image" content="${img}" />
         <meta property="og:title" content="${title}" />
         <meta property="og:description" content="${desc}" />
