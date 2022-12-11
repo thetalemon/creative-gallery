@@ -13,7 +13,7 @@ type Ripple = {
 
 const rippleList: Ripple[] = []
 
-const Ripple: React.FC = () => {
+const P5: React.FC = () => {
   const sketch = (p: P5CanvasInstance) => {
     p.setup = () => {
       p.createCanvas(800, 500)
@@ -55,4 +55,4 @@ const Ripple: React.FC = () => {
   return <ReactP5Wrapper sketch={sketch} />
 }
 
-export default Ripple
+export default P5

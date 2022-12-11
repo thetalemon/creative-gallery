@@ -8,13 +8,20 @@ export const documentProps = {
   url: 'https://creative-gallery-ten.vercel.app/ripple',
 }
 
-const createRipple = (serverSide: boolean) =>
-  serverSide && React.lazy(() => import('./ripple'))
+const createP5Component = (serverSide: boolean) =>
+  serverSide && React.lazy(() => import('./p5'))
 
 export function Page() {
-  const Ripple = createRipple(typeof window !== `undefined`)
+  const P5 = createP5Component(typeof window !== `undefined`)
 
   return (
-    <Suspense fallback={<div>Loading...</div>}>{Ripple && <Ripple />}</Suspense>
+    <Suspense fallback={<div>Loading...</div>}>
+      {P5 && (
+        <>
+          <span>どこかをクリック</span>
+          <P5 />
+        </>
+      )}
+    </Suspense>
   )
 }

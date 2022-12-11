@@ -15,6 +15,9 @@ export function Page() {
         <li>
           <a href="/ripple">波紋</a>
         </li>
+        <li>
+          <a href="/makimono">巻物の群れ</a>
+        </li>
       </ul>
     </div>
   )
