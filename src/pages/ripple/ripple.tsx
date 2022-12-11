@@ -1,13 +1,13 @@
+import React from 'react'
 import '../../App.css'
 import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper'
-import React from "react"
 
 function randBoolean() {
   return Math.random() < 0.05
 }
 
 type Ripple = {
-  center: { x: number; y: number },
+  center: { x: number; y: number }
   diameterList: number[]
 }
 
@@ -52,9 +52,7 @@ const Ripple: React.FC = () => {
     }
   }
 
-  return (
-    <ReactP5Wrapper sketch={sketch}/>
-  )
+  return <ReactP5Wrapper sketch={sketch} />
 }
 
 export default Ripple

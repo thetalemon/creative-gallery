@@ -6,14 +6,18 @@ import { Link } from './Link'
 
 export { PageShell }
 
-function PageShell({ children, pageContext }: { children: React.ReactNode; pageContext: PageContext }) {
+function PageShell({
+  children,
+  pageContext,
+}: {
+  children: React.ReactNode
+  pageContext: PageContext
+}) {
   return (
     <React.StrictMode>
       <PageContextProvider pageContext={pageContext}>
         <Layout>
-          <Link href="/">
-            Home
-          </Link>
+          <Link href="/">Home</Link>
           <Content>{children}</Content>
         </Layout>
       </PageContextProvider>
@@ -27,7 +31,7 @@ function Layout({ children }: { children: React.ReactNode }) {
       style={{
         padding: '24px',
         maxWidth: 900,
-        margin: 'auto'
+        margin: 'auto',
       }}
     >
       {children}
@@ -41,7 +45,7 @@ function Content({ children }: { children: React.ReactNode }) {
       style={{
         padding: 20,
         paddingBottom: 50,
-        minHeight: '100vh'
+        minHeight: '100vh',
       }}
     >
       {children}
