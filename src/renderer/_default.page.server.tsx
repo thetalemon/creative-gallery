@@ -38,7 +38,7 @@ async function render(pageContext: PageContextServer) {
     'https://creative-gallery-ten.vercel.app'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
-    <html lang="en">
+    <html lang="ja">
       <head>
         <meta charset="UTF-8" />
         <link rel="icon" href="/mylogo.ico" />

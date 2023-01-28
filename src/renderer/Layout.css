@@ -1,0 +1,28 @@
+#page-view {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainContent {
+  padding: 16px;
+}
+
+header,footer {
+  background: #44617b;
+  color: #fff;
+  padding: 4px 8px;
+}
+
+header a,footer a {
+  color: #fff;
+}
+
+header a:hover,footer a:hover {
+  color: #7da9cf;
+}
+
+footer {
+  margin-top: auto;
+  text-align: center;
+}
