@@ -8,7 +8,7 @@ export const documentProps = {
   url: 'https://creative-gallery-ten.vercel.app',
 }
 
-export function Page() {
+export const Page: React.FC = () => {
   return (
     <div className="App">
       <ul>
