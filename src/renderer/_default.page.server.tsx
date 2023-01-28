@@ -1,19 +1,27 @@
 import ReactDOMServer from 'react-dom/server'
-import React from 'react'
+import { renderToStream } from 'react-streaming/server'
 import { PageShell } from './PageShell'
 import { escapeInject, dangerouslySkipEscape } from 'vite-plugin-ssr'
 import type { PageContextServer } from './types'
 
 export { render }
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ['pageProps', 'urlPathname']
+export const passToClient = ['pageProps', 'urlPathname', 'someAsyncProps']
 
 async function render(pageContext: PageContextServer) {
   const { Page, pageProps } = pageContext
-  const pageHtml = ReactDOMServer.renderToString(
+  // const pageHtml = ReactDOMServer.renderToString(
+  //   <PageShell pageContext={pageContext}>
+  //     <Page {...pageProps} />
+  //   </PageShell>
+  // )
+  
+  const stream = await renderToStream(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
-    </PageShell>
+    </PageShell>,
+    // We don't need react-streaming for this app. (We use it merely to showcase that VPS can handle react-streaming with a pre-rendered app. Note that using react-streaming with pre-rendering can make sense if we want to be able to use React's latest <Suspsense> techniques.)
+    { disable: true }
   )
 
   // See https://vite-plugin-ssr.com/head
@@ -49,7 +57,7 @@ async function render(pageContext: PageContextServer) {
         <title>${title}</title>
       </head>
       <body>
-        <div id="page-view">${dangerouslySkipEscape(pageHtml)}</div>
+        <div id="page-view">${stream}</div>
       </body>
     </html>`
 

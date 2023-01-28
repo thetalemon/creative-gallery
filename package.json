@@ -15,7 +15,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-p5-wrapper": "3.4.0",
-    "vite-plugin-ssr": "0.4.55"
+    "react-streaming": "0.3.5",
+    "vite-plugin-ssr": "0.4.71"
   },
   "devDependencies": {
     "@remix-run/dev": "1.8.2",

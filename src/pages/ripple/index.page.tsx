@@ -1,6 +1,6 @@
-import React, { Suspense } from 'react'
 import '../../base.css'
-import {BASE_URL} from '../../static'
+import { BASE_URL } from '../../static'
+import { ClientOnly } from '../../component/clientOnly'
 
 export const documentProps = {
   title: '波紋 - manasas p.js gallery',
@@ -9,20 +9,11 @@ export const documentProps = {
   url: `${BASE_URL}/ripple`,
 }
 
-const createP5Component = (serverSide: boolean) =>
-  serverSide && React.lazy(() => import('./p5'))
-
 export function Page() {
-  const P5 = createP5Component(typeof window !== `undefined`)
-
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {P5 && (
-        <>
-          <span>どこかをクリック</span>
-          <P5 />
-        </>
-      )}
-    </Suspense>
+    <>
+      <p>どこかをクリック</p>
+      <ClientOnly load={() => import('./p5')} />
+    </>
   )
 }
