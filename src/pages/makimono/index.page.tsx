@@ -1,5 +1,5 @@
 import '../../base.css'
-import {BASE_URL} from '../../static'
+import { BASE_URL } from '../../static'
 import { ClientOnly } from '../../component/clientOnly'
 
 export const documentProps = {

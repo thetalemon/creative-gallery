@@ -15,7 +15,7 @@ async function render(pageContext: PageContextServer) {
   //     <Page {...pageProps} />
   //   </PageShell>
   // )
-  
+
   const stream = await renderToStream(
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />

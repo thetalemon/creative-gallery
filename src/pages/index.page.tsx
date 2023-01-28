@@ -1,7 +1,7 @@
 import React from 'react'
 import '../base.css'
 import '../index.css'
-import {BASE_URL} from '../static'
+import { BASE_URL } from '../static'
 
 export const documentProps = {
   title: 'manasas p.js gallery',
@@ -13,11 +13,11 @@ export const documentProps = {
 export const Page: React.FC = () => {
   return (
     <div className="App">
-      <ul className='wrapper'>
+      <ul className="wrapper">
         <li>
           <a href="/ripple">
             <div>
-              <img src={`${BASE_URL}/ripple.png`}/>
+              <img src={`${BASE_URL}/ripple.png`} />
               波紋
             </div>
           </a>
@@ -25,7 +25,7 @@ export const Page: React.FC = () => {
         <li>
           <a href="/makimono">
             <div>
-              <img src={`${BASE_URL}/makimono.png`}/>
+              <img src={`${BASE_URL}/makimono.png`} />
               巻物の群れ
             </div>
           </a>
