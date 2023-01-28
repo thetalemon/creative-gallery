@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../App.css'
 import { P5CanvasInstance, ReactP5Wrapper } from 'react-p5-wrapper'
 
 type Roll = {

@@ -1,11 +1,12 @@
 import React, { Suspense } from 'react'
-import '../../App.css'
+import '../../base.css'
+import {BASE_URL} from '../../static'
 
 export const documentProps = {
   title: '巻物の群れ - manasas p.js gallery',
   description: '抹茶ロールケーキに憧れる巻物の群れ',
-  img: 'https://creative-gallery-ten.vercel.app/makimono.png',
-  url: 'https://creative-gallery-ten.vercel.app/makimono',
+  img: `${BASE_URL}/makimono.png`,
+  url: `${BASE_URL}/makimono`,
 }
 
 const createP5Component = (serverSide: boolean) =>

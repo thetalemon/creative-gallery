@@ -29,7 +29,7 @@ function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        padding: '24px',
+        padding: '16px',
         maxWidth: 900,
         margin: 'auto',
       }}
@@ -43,8 +43,7 @@ function Content({ children }: { children: React.ReactNode }) {
   return (
     <div
       style={{
-        padding: 20,
-        paddingBottom: 50,
+        paddingTop: '16px',
         minHeight: '100vh',
       }}
     >
